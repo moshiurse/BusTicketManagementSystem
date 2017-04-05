@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Travel_System.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Image ID="Image1" runat="server" Height="174px" ImageUrl="~/Images/admin.jpg" Width="549px" />
+        <br />
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" style="font-size: large" BackColor="#FFFBD6" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" StaticSubMenuIndent="10px">
+            <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <DynamicMenuStyle BackColor="#FFFBD6" />
+            <DynamicSelectedStyle BackColor="#FFCC66" />
+            <Items>
+                <asp:MenuItem Text="Bus" Value="Bus">
+                    <asp:MenuItem NavigateUrl="~/AddBus.aspx" Text="Add Bus" Value="Add Bus"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="DeleteBus.aspx" Text="Delete Bus" Value="Delete Bus"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="UpdateBus.aspx" Text="Update Bus" Value="Update Bus"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="View Bus" Value="View Bus" NavigateUrl="~/ViewBus.aspx"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/ViewReservation.aspx" Text="View Reservation" Value="View Reservation"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Logout.aspx" Text="LogOut" Value="LogOut"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/CreateAdmin.aspx" Text="Create Admin" Value="Create Admin"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="CancelTicket.aspx" Text="Cancel Ticket" Value="Cancel Ticket"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="ViewContact.aspx" Text="ViewContact" Value="ViewContact"></asp:MenuItem>
+            </Items>
+            <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <StaticSelectedStyle BackColor="#FFCC66" />
+        </asp:Menu>
+        <br />
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
